@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Bootstrap CSS -->
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<title>Tips</title>
+	</head>
+
+	<body>
+
+		<div class="col-sm-2 my-2">
+		  <input id="amount" type="text" class="form-control" id="inlineFormInputName" placeholder="Amount">
+		</div>
+
+		<button id="go10" type="button" class="btn btn-secondary btn-lg">tip 10%</button>
+		<button id="go15" type="button" class="btn btn-success btn-lg">tip 15%</button>
+		<button id="go18" type="button" class="btn btn-danger btn-lg">tip 18%</button>
+		<br>
+
+		<table class="table table-hover">
+			<tbody>
+			<tr>
+			  <th scope="row">Tips</th>
+			  <td><div id="tip"></div></td>
+			</tr>
+			<tr>
+			  <th scope="row">Amount</th>
+			  <td><div id="result"></div></td>
+			</tr>
+		</tbody>
+		</table>    
+	</body>
+
+	<script>
+		function go_10() {
+			var x = Number(document.getElementById('amount').value);
+			var y = 0.1;
+
+			var tip = x * y;
+			var result = x + tip;
+
+
+			document.getElementById('tip').innerHTML = tip;
+			document.getElementById('result').innerHTML = result;
+		}
+
+		function go_15() {
+			var x = Number(document.getElementById('amount').value);
+			var y = 0.15;
+
+			var tip = x * y;
+			var result = x + tip;
+
+
+			document.getElementById('tip').innerHTML = tip;
+			document.getElementById('result').innerHTML = result;
+		}
+
+		function go_18() {
+			var x = Number(document.getElementById('amount').value);
+			var y = 0.18;
+
+			var tip = x * y;
+			var result = x + tip;
+
+
+			document.getElementById('tip').innerHTML = tip;
+			document.getElementById('result').innerHTML = result;
+		}
+
+		document.getElementById('go10').addEventListener('click', go_10);
+		document.getElementById('go15').addEventListener('click', go_15);
+		document.getElementById('go18').addEventListener('click', go_18);
+	</script>
+</html>
